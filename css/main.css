@@ -1,0 +1,429 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover,
+a:focus {
+  color: white !important;
+  color: #ffffffc7;
+}
+
+.navbar {
+  z-index: 99;
+  transition: all 0.3s;
+  background-color: transparent;
+}
+
+.navbar .navbar-brand {
+  position: relative;
+  display: flex;
+  font-weight: 550;
+  align-items: center;
+  letter-spacing: 2px;
+  color: #ff7a00;
+}
+
+.navbar .navbar-brand:hover {
+  color: black !important;
+}
+
+.navbar .navbar-brand div {
+  height: 40px;
+  width: 40px;
+  background-color: #6cddfc;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.navbar .navbar-nav a {
+  padding: 0 35px !important;
+  font-weight: 550;
+  letter-spacing: 2px;
+  color: black !important;
+}
+
+.navbar .navbar-nav a:hover, .navbar .navbar-nav a:focus {
+  color: #9bffb1 !important;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    top: 0;
+  }
+  .navbar #navbarNavAltMarkup div a {
+    padding: 10px 0 !important;
+    text-align: center;
+  }
+}
+
+.jumbotron .container {
+  cursor: default;
+}
+
+.jumbotron .container .jumbosatu span {
+  color: #ff7a00;
+}
+
+.jumbotron .container .jumbosatu h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  word-break: keep-all;
+  font-weight: 550;
+}
+
+.jumbotron .container .jumbosatu .btn {
+  border-radius: 50px;
+  transition: all 0.3s;
+  padding: 5px 35px;
+  cursor: pointer;
+}
+
+.jumbotron .container .jumbodua {
+  text-align: right;
+}
+
+.jumbotron .container .jumbodua img {
+  width: 80%;
+}
+
+.jumbotron .container .jumbodua:before {
+  content: "";
+  background-image: url(../img/bgcMain.png);
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  right: 0;
+  top: 0;
+  background: linear-gradient(130deg, #cdf4ff 30%, rgba(192, 241, 255, 0) 70.1%);
+}
+
+.jumbotron .arrowBottom {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  animation-name: arrowDut;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.jumbotron .arrowBottom img {
+  width: 40px;
+  color: rgba(0, 0, 0, 0.589);
+}
+
+@media screen and (max-width: 900px) {
+  .jumbotron {
+    margin-top: 0px;
+    background: url(../img/bgcMain.png);
+    background-repeat: no-repeat;
+  }
+  .jumbotron .container .row {
+    justify-content: center;
+  }
+  .jumbotron .container .row .jumbosatu h2 {
+    font-size: 30px !important;
+  }
+  .jumbotron .container .row .jumbosatu p {
+    font-size: 16px;
+  }
+  .jumbotron .container .row .jumbodua {
+    display: none;
+  }
+}
+
+.about {
+  margin-top: 200px;
+  height: 90vh;
+  background-color: #c0f1ff;
+  cursor: default;
+}
+
+.about .about-satu {
+  margin-top: 40px;
+}
+
+.about .about-satu h1 {
+  font-size: 45px;
+}
+
+.about .about-satu p {
+  font-size: 22px;
+  text-align: justify;
+}
+
+.about .about-dua {
+  cursor: default;
+  margin-top: 30px;
+}
+
+.about .about-dua div {
+  font-family: "Roboto Slab";
+  width: 270px;
+  height: 167px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about .about-dua div h1 {
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    height: fit-content;
+    padding: 50px 0;
+  }
+  .about .container .row {
+    flex-direction: column !important;
+  }
+  .about .container .row .about-satu h1 {
+    font-size: 40px;
+  }
+  .about .container .row .about-satu p {
+    font-size: 18px;
+  }
+  .about .container .row .about-dua {
+    gap: 20px;
+  }
+  .about .container .row .about-dua div {
+    justify-content: space-around;
+    width: 30%;
+    height: 95%;
+  }
+  .about .container .row .about-dua div h1 {
+    font-size: 40px;
+  }
+  .about .container .row .about-dua div p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about {
+    height: fit-content !important;
+  }
+  .about .container .row {
+    flex-direction: column;
+  }
+  .about .container .row .about-satu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about .container .row .about-satu h1 {
+    font-size: 35px;
+  }
+  .about .container .row .about-satu p {
+    font-size: 18px;
+  }
+  .about .container .row .about-dua {
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+  .about .container .row .about-dua div {
+    width: 80%;
+    margin: auto;
+  }
+  .about .container .row .about-dua div h1 {
+    font-size: 50px;
+  }
+}
+
+.carousel .carousel-inner .carousel-item {
+  top: 20%;
+}
+
+.carousel .carousel-inner .carousel-item .card {
+  margin: auto;
+  width: 450px;
+  height: 410px;
+  justify-content: space-around;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.carousel .carousel-inner .carousel-item .card h3 {
+  margin-bottom: 20px;
+}
+
+.carousel .carousel-inner .carousel-item .card p {
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel .carousel-inner .carousel-item {
+    top: 15%;
+  }
+  .carousel .carousel-inner .carousel-item .card {
+    width: 70%;
+  }
+  .carousel .carousel-inner .carousel-item .card .testi img {
+    width: 30%;
+  }
+  .carousel .carousel-inner .carousel-item .card .text-testi h3 {
+    font-size: 24px;
+  }
+  .carousel .carousel-inner .carousel-item .card .text-testi p {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel .carousel-inner .carousel-item .card .testi img {
+    width: 60%;
+  }
+}
+
+.carousel a img {
+  width: 40px;
+}
+
+.upgrade {
+  margin: 50px 0;
+}
+
+.upgrade .container .row {
+  gap: 15px;
+}
+
+.upgrade .container .row h1 {
+  font-size: 45px;
+  margin: auto;
+}
+
+.upgrade .container .row button {
+  margin: auto;
+  width: fit-content;
+  font-size: 25px;
+  border-radius: 0;
+  padding: 5px 25px;
+}
+
+@media screen and (max-width: 756px) {
+  .upgrade .container .row h1 {
+    font-size: 30px;
+  }
+  .upgrade .container .row button {
+    font-size: 18px;
+  }
+}
+
+footer {
+  margin-top: 200px;
+  padding: 50px 0;
+  height: fit-content;
+  position: relative;
+}
+
+footer .container .row {
+  gap: 20px;
+}
+
+footer .container .row div {
+  gap: 15px;
+}
+
+footer .container .row div h4 {
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+
+footer .container .row div h4 span {
+  display: none;
+  right: 0;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  footer .container .row div h4 span {
+    display: block;
+  }
+}
+
+footer .container .row div .link-text {
+  transition: transform 0.9s;
+  position: relative;
+}
+
+footer .container .row div .link-text a {
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  footer .container .row {
+    gap: 50px;
+  }
+}
+
+footer:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 150%;
+  background-image: url(../img/gelombang.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -120px;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+  footer:before {
+    background-position: -500px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer:before {
+    height: 103%;
+    top: -20px;
+    background-position: 0 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer {
+    margin-top: 150px;
+    padding: 50px 0;
+  }
+}
+
+@keyframes arrowDut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0, 5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
